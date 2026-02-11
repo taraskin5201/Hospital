@@ -33,7 +33,7 @@ if not gemini_api_key or not pinecone_api_key:
     st.stop()
 
 # =======================
-# LLM (БЕЗ ЗМІН)
+# LLM
 # =======================
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
@@ -52,7 +52,7 @@ def clean_sql(sql: str) -> str:
 
 
 # =======================
-# ВЕКТОРНА БАЗА (БЕЗ ЗМІН)
+# ВЕКТОРНА БАЗА
 # =======================
 def search_vector_db(query: str, k=3):
     embeddings = GoogleGenerativeAIEmbeddings(
@@ -78,7 +78,7 @@ def search_vector_db(query: str, k=3):
 
 
 # =======================
-# РЕЛЯЦІЙНА БАЗА (БЕЗ ЗМІН)
+# РЕЛЯЦІЙНА БАЗА
 # =======================
 def query_relational_db(query: str):
     DATABASE_URL = (
@@ -137,7 +137,7 @@ def query_relational_db(query: str):
 
 
 # =======================
-# ГІБРИДНИЙ АГЕНТ (БЕЗ ЗМІН)
+# ГІБРИДНИЙ АГЕНТ
 # =======================
 def hybrid_agent(query: str):
     vector_text = search_vector_db(query)
@@ -164,7 +164,7 @@ def hybrid_agent(query: str):
 
 
 # =======================
-# ІСТОРІЯ ЧАТУ (ЯК НА ПРАКТИЦІ)
+# ІСТОРІЯ ЧАТУ
 # =======================
 if "history" not in st.session_state:
     st.session_state["history"] = []
