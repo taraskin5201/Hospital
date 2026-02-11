@@ -1,6 +1,5 @@
 # ==============РОБОЧИЙ КОД ДЛЯ ЗАВАНТАЖЕННЯ ДОКУМЕНТІВ У PINECONE================
 
-# -*- coding: utf-8 -*-
 import os
 import json
 import dotenv
